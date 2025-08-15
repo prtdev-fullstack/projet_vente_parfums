@@ -14,14 +14,18 @@ const Home: React.FC = () => {
         {/* Background with parallax effect */}
 <div className="absolute inset-0 overflow-hidden">
   <div
-    className="w-full h-full bg-cover bg-center bg-no-repeat scale-110 md:scale-105 transition-transform duration-[20s] ease-out"
+    className="w-full h-full bg-cover bg-no-repeat transition-transform duration-[20s] ease-out scale-110 md:scale-105"
     style={{
       backgroundImage: "url('https://images.pexels.com/photos/1190829/pexels-photo-1190829.jpeg')",
+      backgroundPosition: "left center", // Collé à gauche
       minHeight: "100vh",
+      transform: "translateZ(0)", // Optimisation iOS et Android
     }}
   />
   <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-br from-black/80 via-purple-900/30 to-black/80" />
 </div>
+
+
 
         {/* Floating elements */}
         <div className="absolute top-10 left-4 md:top-20 md:left-10 w-20 h-20 md:w-40 md:h-40 bg-gradient-to-r from-amber-400/30 to-yellow-500/30 rounded-full blur-2xl animate-pulse"></div>
