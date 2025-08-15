@@ -16,9 +16,9 @@ const Header: React.FC<HeaderProps> = ({ searchQuery, setSearchQuery }) => {
   return (
     <header className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between h-auto md:h-16 py-4 md:py-0">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 mb-4 md:mb-0">
+          <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-sm">P</span>
             </div>
@@ -134,45 +134,34 @@ const Header: React.FC<HeaderProps> = ({ searchQuery, setSearchQuery }) => {
                 >
                   Accueil
                 </Link>
-                <button
-                  className="flex items-center justify-between text-gray-700 hover:text-amber-600 font-medium py-2 w-full"
-                  onClick={() => setIsParfumsDropdownOpen(!isParfumsDropdownOpen)}
+                <Link
+                  to="/products"
+                  className="text-gray-700 hover:text-amber-600 transition-colors font-medium py-2 border-b border-gray-100"
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Parfums
-                  <ChevronDown className={`ml-2 w-4 h-4 transition-transform ${isParfumsDropdownOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {isParfumsDropdownOpen && (
-                  <div className="flex flex-col pl-4 space-y-1">
-                    <Link
-                      to="/products"
-                      className="text-gray-700 hover:text-amber-600 py-1"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Tous les parfums
-                    </Link>
-                    <Link
-                      to="/products?category=homme"
-                      className="text-gray-700 hover:text-amber-600 py-1"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Homme
-                    </Link>
-                    <Link
-                      to="/products?category=femme"
-                      className="text-gray-700 hover:text-amber-600 py-1"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Femme
-                    </Link>
-                    <Link
-                      to="/products?category=unisexe"
-                      className="text-gray-700 hover:text-amber-600 py-1"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Unisexe
-                    </Link>
-                  </div>
-                )}
+                  Tous les parfums
+                </Link>
+                <Link
+                  to="/products?category=homme"
+                  className="text-gray-700 hover:text-amber-600 transition-colors font-medium py-2 pl-4"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Homme
+                </Link>
+                <Link
+                  to="/products?category=femme"
+                  className="text-gray-700 hover:text-amber-600 transition-colors font-medium py-2 pl-4"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Femme
+                </Link>
+                <Link
+                  to="/products?category=unisexe"
+                  className="text-gray-700 hover:text-amber-600 transition-colors font-medium py-2 pl-4"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Unisexe
+                </Link>
               </nav>
             </div>
           </div>

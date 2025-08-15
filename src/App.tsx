@@ -16,11 +16,8 @@ function App() {
     <CartProvider>
       <Router>
         <div className="flex flex-col min-h-screen">
-          {/* Header */}
           <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-
-          {/* Main content with responsive padding */}
-          <main className="flex-1 px-4 sm:px-6 lg:px-8">
+          <main className="flex-1">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/products" element={<ProductList searchQuery={searchQuery} />} />
@@ -28,11 +25,7 @@ function App() {
               <Route path="/checkout" element={<Checkout />} />
             </Routes>
           </main>
-
-          {/* Footer */}
           <Footer />
-
-          {/* Floating cart for mobile */}
           <Cart />
         </div>
       </Router>

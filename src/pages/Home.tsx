@@ -12,17 +12,14 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background with parallax effect */}
-<div className="absolute inset-0 overflow-hidden">
-  <div
-    className="w-full h-full bg-cover bg-center bg-no-repeat scale-110 md:scale-105 transition-transform duration-[20s] ease-out"
-    style={{
-      backgroundImage: "url('https://images.pexels.com/photos/1190829/pexels-photo-1190829.jpeg')",
-      minHeight: "100vh",
-    }}
-  />
-  <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-br from-black/80 via-purple-900/30 to-black/80" />
-</div>
-
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110 md:scale-105 transition-transform duration-[20s] ease-out"
+          style={{
+            backgroundImage: 'url(https://images.pexels.com/photos/1190829/pexels-photo-1190829.jpeg)'
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-br from-black/80 via-purple-900/30 to-black/80" />
+        
         {/* Floating elements */}
         <div className="absolute top-10 left-4 md:top-20 md:left-10 w-20 h-20 md:w-40 md:h-40 bg-gradient-to-r from-amber-400/30 to-yellow-500/30 rounded-full blur-2xl animate-pulse"></div>
         <div className="absolute bottom-10 right-4 md:bottom-20 md:right-10 w-32 h-32 md:w-64 md:h-64 bg-gradient-to-l from-yellow-400/20 to-amber-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -32,7 +29,7 @@ const Home: React.FC = () => {
         <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6">
           <div className="mb-6">
             <span className="inline-block px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-amber-500/20 to-yellow-500/20 backdrop-blur-md text-amber-200 text-xs md:text-sm font-semibold rounded-full border border-amber-400/40 shadow-lg animate-pulse">
-              ✨ Collection Exclusive 2025
+              ✨ Collection Exclusive 2024
             </span>
           </div>
           
